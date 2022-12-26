@@ -1,0 +1,4 @@
+Reverse a String in C++ [3 Methods]
+C++: Check if Key Exists in Map [4 Methods]
+Reverse a Number in C++ [3 Methods]
+C++: Convert Int to Char Array [3 Methods]
