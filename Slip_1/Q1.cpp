@@ -24,7 +24,7 @@ void Cylinder :: setheight()
 
 void Cylinder :: volume()
 {
-    vol = 3.13*radius*radius*height;
+    vol = 3.14*radius*radius*height;
     cout << vol;
 }
 

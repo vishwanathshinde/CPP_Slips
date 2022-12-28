@@ -7,13 +7,13 @@ int main()
     string line;
     // For writing text file
     // Creating ofstream & ifstream class object
-    ifstream ini_file{"original.txt"};
+    ifstream in_file{"original.txt"};
     ofstream out_file{"copy.txt"};
 
-    if (ini_file && out_file)
+    if (in_file && out_file)
     {
 
-        while (getline(ini_file, line))
+        while (getline(in_file, line))
         {
             out_file << line << "\n";
         }
