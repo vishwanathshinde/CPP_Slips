@@ -104,7 +104,7 @@ int main()
         case 1:
             cout << "\n Enter How many records : ";
             cin >> n;
-            cout<<"\n Enter how many reservations: "; 
+            //cout<<"\n Enter how many reservations: "; 
             for(i=0; i<n; i++) 
             {
                 s[i].getres();
