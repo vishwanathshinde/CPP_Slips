@@ -27,7 +27,7 @@ int main()
     }
 
     // Closing file
-    ini_file.close();
+    in_file.close();
     out_file.close();
 
     return 0;
