@@ -30,7 +30,7 @@ int main()
     s.maximum(10,15);
     int arr [ ] = { 10 , 324 , 100005 , 90 , 9808 } ;
     int n = sizeof ( arr ) / sizeof (arr [ 0 ] ) ;
-    cout << " Largest in given array is " << ( arr , n ) ;
+    cout << "\nLargest in given array is " << ( arr , n ) ;
     s.maximum(arr,5);
     return 0;
 }

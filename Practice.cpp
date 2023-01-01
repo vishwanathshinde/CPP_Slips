@@ -1,48 +1,39 @@
 #include<iostream>
 using namespace std;
 
-class Item
+class student
 {
-    int Item_code, Item_price;
-    char Item_name[20];
-    static int count;
-
-  public:
-    void getdata()
-    {
-        cout << "Enter the item code: ";
-        cin >> Item_code;
-        cout << "Enter the item name: ";
-        cin >> Item_name;
-        cout << "Enter the item price: ";
-        cin >> Item_price;
-        count++;
-    }
-
-    void display()
-    {
-        cout << "Item code: " << Item_code;
-        cout << "Item name: " << Item_price;
-        cout << "Item price: " << Item_price;
-    }
-
-    static void nob()
-    {
-        cout << "Total number of objects are: " << count;
-    }
+    public:
+        int maximum(int,int);
+        int maximum(int*, int arraylength);
 };
-int Item::count;
+
+int student :: maximum(int a, int b)
+{
+    if(a>b)
+        cout << a << "is maximum";
+    else
+        cout << b << "is maximum";
+}
+
+int student :: maximum(int arr[] , int n)
+{
+    int i;
+    if(arr[0] < arr[i])
+    {
+        arr[0] = arr[i];
+    }
+    cout << "\nLargest element: " << arr[0];
+}
+
 int main()
 {
-    Item ob;
-    int n;
-    cout << "Enter how many items: ";
-    cin >> n;
+    student s;
+    s.maximum(10,20);
 
-    for(int i=0; i<n; i++)
-        ob.getdata();
-    for(int i=0; i<n; i++)
-        ob.display();
-    ob.nob();
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout << "\nLargest in given array is " << ( arr , n ) ;
+    s.maximum(arr,5);
     return 0;
 }
