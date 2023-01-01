@@ -1,40 +1,32 @@
 #include<iostream>
-#include <string.h>
 using namespace std;
 
-class Mobile
+class printdata
 {
-    int Mobile_Id, Mobile_Price;
-    char Mobile_Name[20];
-
-  public:
-    Mobile(int Id, int Price, char *Name)
-    {
-        Mobile_Id = Id;
-        Mobile_Price = Price;
-        strcpy(Mobile_Name, Name);
-    }
-
-    void display()
-    {
-        cout << "\nMobile id: " << Mobile_Id;
-        cout << "\nMobile name: " << Mobile_Name;
-        cout << "\nMobile price: " << Mobile_Price;
-    }
+    public:
+        void print(int);
+        void print(char *);
 };
+
+void printdata :: print(int a)
+{
+    cout << "First function(int): " << a;
+}
+
+void printdata :: print(char *str)
+{
+    cout << "Second function(char *): " << "\"" << str << "\"";
+}
 
 int main()
 {
-    int Id, Price;
-    char Name[20];
+    printdata pd;
+    pd.print(10);
 
-    cout << "\nEnter mobile id: ";
-    cin >> Id;
-    cout << "\nEnter mobile name: ";
-    cin >> Name;
-    cout << "\nEnter mobile price: ";
-    cin >> Price;
+    char name[20];
+    cout << "\nEnter string: ";
+    cin >> name;
 
-    Mobile m1(Id, Price, Name);
-    m1.display();
+    pd.print(name);
+    return 0;
 }

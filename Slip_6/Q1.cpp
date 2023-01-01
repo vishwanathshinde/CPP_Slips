@@ -1,37 +1,32 @@
 #include<iostream>
 using namespace std;
+
 class printdata
 {
     public:
         void print(int);
-        void print(int,int);
         void print(char *);
 };
- 
-void printdata::print(int a)
+
+void printdata :: print(int a)
 {
-    cout<<endl<<"First Function (int): "<<a;
+    cout << "First function(int): " << a;
 }
- 
-void printdata::print(int a,int b)
+
+void printdata :: print(char *str)
 {
-    cout<<endl<<"Second Function (int,int): "<<"[<"<<a<<">,<"<<b<<">]"<<endl;
+    cout << "Second function(char *): " << "\"" << str << "\"";
 }
- 
-void printdata::print(char *str)
-{
-    cout<<"Third Function (char *): ";
-    cout<<"\""<<str<<"\""<<endl;
-}
- 
+
 int main()
 {
-    printdata p;
-    p.print(25);
-    //p.print(200,18);
+    printdata pd;
+    pd.print(10);
+
     char name[20];
-    cout<<endl<<"Enter the string: ";
-    cin>>name;
-    p.print(name);
+    cout << "\nEnter string: ";
+    cin >> name;
+
+    pd.print(name);
     return 0;
 }
