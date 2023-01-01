@@ -1,52 +1,40 @@
-#include <iostream>
-using namespace std;
-#include <conio.h>
+#include<iostream>
 #include <string.h>
-class part
-{
-    int pid;
-    char pnm[20];
-    float price;
+using namespace std;
 
-public:
-    part(int, char *, float);
-    part(){};
-    void putpart();
+class Mobile
+{
+    int Mobile_Id, Mobile_Price;
+    char Mobile_Name[20];
+
+  public:
+    Mobile(int Id, int Price, char *Name)
+    {
+        Mobile_Id = Id;
+        Mobile_Price = Price;
+        strcpy(Mobile_Name, Name);
+    }
+
+    void display()
+    {
+        cout << "\nMobile id: " << Mobile_Id;
+        cout << "\nMobile name: " << Mobile_Name;
+        cout << "\nMobile price: " << Mobile_Price;
+    }
 };
-part::part(int id, char *nm, float prc)
-{
-    pid = id;
-    strcpy(pnm, nm);
-    price = prc;
-}
-void part::putpart()
-{
-    cout << "\n Part id : " << pid;
-    cout << "\n Part name : "<< pnm;
-    cout << "\n Part price : "<<price;
-}
+
 int main()
 {
-    int id;
-    char nm[20];
-    float prc;
-    cout << "\n Enter part id : ";
-    cin >> id;
-    cout << "\n Enter Part name : ";
-    cin >> nm;
-    cout << "\n Enter Part price : ";
-    cin >> prc;
-    
-    part p1(id, nm, prc);
-    part p2;
-    p2 = p1;
-    cout << "\n-----------------------------";
-    cout << "\n Parameterized constructor ";
-    cout << "\n-----------------------------";
-    p1.putpart();
-    cout << "\n-----------------------------";
-    cout << "\n copy constructur ";
-    cout << "\n-----------------------------";
-    p2.putpart();
-    return 0;
+    int Id, Price;
+    char Name[20];
+
+    cout << "\nEnter mobile id: ";
+    cin >> Id;
+    cout << "\nEnter mobile name: ";
+    cin >> Name;
+    cout << "\nEnter mobile price: ";
+    cin >> Price;
+
+    Mobile m1(Id, Price, Name);
+    m1.display();
 }

@@ -19,7 +19,7 @@ inline float area(float r)
 int main()
 {
     int s, l, b;
-    float r, bs, ht;
+    float r;
     cout << "Enter side of a square:";
     cin >> s;
     cout << "Enter length and breadth of rectangle:";
