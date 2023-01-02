@@ -34,6 +34,6 @@ int main()
     n.display();
 
     cout << "\n For parameterizd constructor : ";
-    number n1(10,20);
-    n.display();
+    number n1(10,30);
+    n1.display();
 }
