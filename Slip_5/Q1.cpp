@@ -5,14 +5,14 @@ using namespace std;
 class Mobile
 {
     int Mobile_Id, Mobile_Price;
-    char Mobile_Name[20];
+    char Mobile_Name;
 
   public:
-    Mobile(int Id, int Price, char *Name)
+    Mobile(int Id, int Price, char Name)
     {
         Mobile_Id = Id;
         Mobile_Price = Price;
-        strcpy(Mobile_Name, Name);
+        Mobile_Name = Name;
     }
 
     void display()
@@ -26,7 +26,7 @@ class Mobile
 int main()
 {
     int Id, Price;
-    char Name[20];
+    char Name;
 
     cout << "\nEnter mobile id: ";
     cin >> Id;
